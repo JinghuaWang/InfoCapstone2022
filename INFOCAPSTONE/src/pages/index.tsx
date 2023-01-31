@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './index.css';
 import SearchBar from '../components/searchBar';
 import Recommandation from '@/components/recommandation'
+import useAnalyticsEventTracker from '@/models/google_analystics';
 
 /**
  * 主页面page
@@ -9,9 +10,10 @@ import Recommandation from '@/components/recommandation'
  */
 function homePage(props: any) {
   return (
-    <div className={styles.contentWrapper}>
+    <div className={styles.contentWrapper} onLoad={() =>useAnalyticsEventTracker("Main Page")}>
       <div className={styles.logo}>
         <img
+          onClick={() =>useAnalyticsEventTracker("Logo")}
           src={require('../assets/logo.jpeg')}
           alt="logo icon"
           width="42px"
