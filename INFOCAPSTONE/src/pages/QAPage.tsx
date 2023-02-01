@@ -1,8 +1,5 @@
-import React from 'react';
 import { useEffect, useState } from 'react';
-import { history } from 'umi';
-import styles from '@/pages/index.css';
-import axios from 'axios';
+import styles from '@/pages/homePage.css';
 import { Button, Modal, Form, Input, Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 import { connect } from 'dva';

@@ -1,11 +1,10 @@
-import React from 'react';
 import { history } from 'umi';
 import { useEffect, useState } from 'react';
-import styles from './index.css';
+import styles from './courseInfo.css';
 import { connect } from 'dva';
 import NavBar from '@/components/navBar';
 import axios from 'axios';
-import { Tag, Divider, Menu } from 'antd';
+import { Tag, Menu } from 'antd';
 import { AiFillGithub } from 'react-icons/ai';
 //import loading from '@/assets/loading.gif'
 

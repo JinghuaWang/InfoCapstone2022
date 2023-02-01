@@ -8,10 +8,10 @@ export default defineConfig({
     '@primary-color': '#a78cf2',
   },
   routes: [
-    { path: '/', component: '@/pages/index', exact:true },
-    { path: '/courseInfo', component: '@/layouts/index', 
-      routes: [{path: '/courseInfo/detail', component: '@/pages/courseInfoPage/index'},
-               {path: '/courseInfo/QA', component: '@/pages/QAPage/QAPage.tsx'}]
+    { path: '/', component: '@/pages/homePage', exact:true },
+    { path: '/courseInfo', component: '@/pages/courseInfo', 
+      routes: [{path: '/courseInfo/detail', component: '@/pages/courseInfoPage'},
+               {path: '/courseInfo/QA', component: '@/pages/QAPage'}]
     },
   ],
   fastRefresh: {},
