@@ -20,7 +20,7 @@ function homePage(props: any) {
           height="42px"
         />
         <p style={{ margin: 0, color: 'white', fontSize: '38pt' }}>
-          Course Expert
+          Course Rating
         </p>
       </div>
       <div className={styles.barWrapper}>
