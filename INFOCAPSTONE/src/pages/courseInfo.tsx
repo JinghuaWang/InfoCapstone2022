@@ -6,6 +6,8 @@ import NavBar from '@/components/navBar';
 import axios from 'axios';
 import { Tag, Menu } from 'antd';
 import { AiFillGithub } from 'react-icons/ai';
+import { Typography } from 'antd';
+const { Title } = Typography;
 //import loading from '@/assets/loading.gif'
 
 /**
@@ -55,7 +57,7 @@ function headArea(props: any) {
     ? []
     : state.tags.map((val: string) => {
         return (
-          <Tag color="#a78cf2" style={{ borderRadius: '20px' }}>
+          <Tag color="#a78cf2" style={{ borderRadius: '20px', fontSize: '14px'}}>
             {val}
           </Tag>
         );
@@ -77,12 +79,12 @@ function headArea(props: any) {
         </div>
         <div className={styles.headArea}>
           {/* <Divider style={{ marginBottom: '-2px', marginTop: '12px'}} /> */}
-          <h2 style={{ display: 'inline-block', padding: '30px 30px 0px' }}>
+          <Title level={3} style={{ padding: '30px 30px 0px' }}>
             {state.course_code} {state.course_title} (
             {state.credit == '' ? 'Na' : state.credit})
-          </h2>
+          </Title>
           <div style={{ padding: '0 30px 15px' }}>{tags}</div>
-          <div style={{ width: '70%', marginBottom: '3vh' }}>
+          <div style={{ width: '80%', marginBottom: '3vh', color: '#434343'}}>
             <p className={styles.courseDescribtion}>{state.description}</p>
           </div>
           <div style={{ borderRadius: '14px' }}>
@@ -90,9 +92,9 @@ function headArea(props: any) {
               onClick={clickHandler}
               mode="horizontal"
               selectedKeys={[currentKey]}
-              style={{ paddingLeft: '10px', borderRadius: '14px' }}
+              style={{ paddingLeft: '10px', borderRadius: '14px', fontSize: '18px', color:"#434343"}}
             >
-              <Menu.Item key="detail">Course Overview</Menu.Item>
+              <Menu.Item key="detail">Course Overvie</Menu.Item>
               <Menu.Item key="QA">Discussion</Menu.Item>
             </Menu>
           </div>

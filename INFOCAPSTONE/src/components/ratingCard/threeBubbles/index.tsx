@@ -20,11 +20,11 @@ const ThreeBubbles = (props: any) => {
             <p
               style={{
                 textAlign: 'center',
-                fontSize: 'x-small',
+                fontSize: '12px',
                 color: '#3A0085',
                 marginRight: '0',
               }}
-            >
+            > 
               {val[0]}
               {val[0] == 'Overall Rating' ? (
                 <Popover

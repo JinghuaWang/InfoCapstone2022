@@ -77,7 +77,7 @@ const Diagram = (props: any) => {
         <XAxis dataKey="name" style={{fontSize:'xx-small'}} interval={0} angle={0} dx={1} dy={1}/>
         <YAxis />
         <Tooltip content={tipContent} />
-        <Legend verticalAlign="top" height={36} content={<div> Grade Distribution </div>}/>
+        <Legend verticalAlign="top" height={36} content={<div style={{fontSize: '18px', color: '#262626'}}> Grade Distribution </div>}/>
         <Bar dataKey="percentage" barSize={36} fill="#755ebf">
         <LabelList
             dataKey="topLabel"

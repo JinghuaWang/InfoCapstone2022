@@ -18,7 +18,7 @@ function homePage(props: any) {
           width="42px"
           height="42px"
         />
-        <p style={{ margin: 0, color: 'white', fontSize: '38pt' }}>
+        <p style={{ margin: 0, color: 'white', fontSize: '32pt' }}>
           Course Rating
         </p>
       </div>
