@@ -23,7 +23,7 @@
     "config/**/*",
     ".umirc.ts",
     "typings.d.ts"
-, "playground.tsx"  ],
+  ],
   "exclude": [
     "node_modules",
     "lib",

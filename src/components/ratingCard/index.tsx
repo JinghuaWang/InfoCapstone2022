@@ -92,7 +92,7 @@ const RatingCard = (props: any) => {
           />
         </div>
       </div>
-      <p style={{alignSelf: 'flex-end', fontSize: 'x-small', opacity: '0.4'}}>Official ratings collected from UW Course Evaluation</p>
+      <p style={{alignSelf: 'flex-end', fontSize: 'x-small', opacity: '0.4'}}>Anonymized Grade Data from UW</p>
     </div>
   );
 };

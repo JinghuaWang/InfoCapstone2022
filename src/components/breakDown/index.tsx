@@ -26,6 +26,7 @@ const BreakDown = (props: any) => {
         <ProgressBar value={breakdown['availability_of_extra_help']} size={23} text={'Availability of extra help'}/>
         <ProgressBar value={breakdown['grading_techniques']} size={23} text={'Grading techniques'}/>
       </div>
+      <p style={{paddingRight: '8vw', alignSelf: 'flex-end', fontSize: 'x-small', opacity: '0.4'}}>Official Ratings from UW Course Evaluations</p>
     </div>
   );
 };

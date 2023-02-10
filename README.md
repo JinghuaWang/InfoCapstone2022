@@ -13,3 +13,9 @@ Start the dev server,
 ```bash
 $ yarn start
 ```
+
+Deployment
+```bash
+$ yarn build
+$ firebase deploy
+```
