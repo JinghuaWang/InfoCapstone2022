@@ -3,9 +3,9 @@ import { Component } from 'react';
 import { ApplyPluginsType } from 'umi';
 import dva from 'dva';
 // @ts-ignore
-import createLoading from '/Users/johnwang/development/InfoCapstone2022/INFOCAPSTONE/node_modules/dva-loading/dist/index.esm.js';
+import createLoading from '/Users/johnwang/development/InfoCapstone2022/node_modules/dva-loading/dist/index.esm.js';
 import { plugin, history } from '../core/umiExports';
-import ModelCourseInfo0 from '/Users/johnwang/development/InfoCapstone2022/INFOCAPSTONE/src/models/courseInfo.tsx';
+import ModelCourseInfo0 from '/Users/johnwang/development/InfoCapstone2022/src/models/courseInfo.tsx';
 
 let app:any = null;
 

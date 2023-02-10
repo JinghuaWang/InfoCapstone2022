@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import { ApplyPluginsType } from '/Users/johnwang/development/InfoCapstone2022/INFOCAPSTONE/node_modules/umi/node_modules/@umijs/runtime';
+import { ApplyPluginsType } from '/Users/johnwang/development/InfoCapstone2022/node_modules/umi/node_modules/@umijs/runtime';
 import * as umiExports from './umiExports';
 import { plugin } from './plugin';
 

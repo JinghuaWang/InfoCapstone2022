@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { createBrowserHistory, History } from '/Users/johnwang/development/InfoCapstone2022/INFOCAPSTONE/node_modules/umi/node_modules/@umijs/runtime';
+import { createBrowserHistory, History } from '/Users/johnwang/development/InfoCapstone2022/node_modules/umi/node_modules/@umijs/runtime';
 
 let options = {
   "basename": "/"

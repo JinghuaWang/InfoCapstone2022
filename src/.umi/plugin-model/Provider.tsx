@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from 'react';
-import initialState from '/Users/johnwang/development/InfoCapstone2022/INFOCAPSTONE/src/.umi/plugin-initial-state/models/initialState';
-import model0 from "/Users/johnwang/development/InfoCapstone2022/INFOCAPSTONE/src/models/google_analystics";
+import initialState from '/Users/johnwang/development/InfoCapstone2022/src/.umi/plugin-initial-state/models/initialState';
+import model0 from "/Users/johnwang/development/InfoCapstone2022/src/models/google_analystics";
 // @ts-ignore
 import Dispatcher from './helpers/dispatcher';
 // @ts-ignore
