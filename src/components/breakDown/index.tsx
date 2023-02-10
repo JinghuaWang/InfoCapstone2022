@@ -6,7 +6,6 @@ import ProgressBar from './progressBar';
 
 const BreakDown = (props: any) => {
   const { breakdown } = props;
-  console.log(breakdown['the_course_as_a_whole'])
   return (
     <div className={styles.bars}>
       <h2 style={{margin: '0 0 4vh', fontWeight: '600', fontSize:'18pt'}}>Rating Breakdown</h2>

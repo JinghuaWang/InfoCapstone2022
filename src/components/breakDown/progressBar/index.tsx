@@ -11,12 +11,12 @@ const ProgressBar = (props: any) => {
 
   function labelColor(rate: number): string {
     if (rate >= 4) {
-      return '#389e0d';
+      return '#5B8C00';
     }
     if (rate >= 3) {
-      return '#ad8b00'
+      return '#D4B106'
     }
-    return '#a8071a';
+    return '#CF1322';
   }
 
   return (
@@ -31,7 +31,7 @@ const ProgressBar = (props: any) => {
         showInfo={false}
         strokeColor="#755ebf"
       />
-      <p style={{ margin: '0 1vw 0', fontSize: 'small', fontWeight: '300', color: labelColor(value)}}>{`${value}/5`}</p>
+      <p style={{ margin: '0 1vw 0', fontSize: 'small', fontWeight: '400', color: labelColor(value)}}>{`${value}/5`}</p>
     </div>
   );
 };
