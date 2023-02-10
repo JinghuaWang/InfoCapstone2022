@@ -9,7 +9,7 @@ const BreakDown = (props: any) => {
   console.log(breakdown['the_course_as_a_whole'])
   return (
     <div className={styles.bars}>
-      <h2 style={{margin: '0 0 4vh'}}>Rating Breakdown</h2>
+      <h2 style={{margin: '0 0 4vh', fontWeight: '600', fontSize:'18pt'}}>Rating Breakdown</h2>
       <div className={styles.twoBarsRow}>
         <ProgressBar value={breakdown['instructor_contribution']} size={23} text={'Instructor’s contribution'}/>
         <ProgressBar value={breakdown['teaching_effectiveness']} size={23} text={'Teaching effectiveness'}/>

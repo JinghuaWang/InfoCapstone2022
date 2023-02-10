@@ -10,16 +10,14 @@ import useAnalyticsEventTracker from '@/models/google_analystics';
 function homePage(props: any) {
   return (
     <div className={styles.contentWrapper} onLoad={() =>useAnalyticsEventTracker("Main Page")}>
-      <div className={styles.logo}>
-        <img
-          onClick={() =>useAnalyticsEventTracker("Logo")}
-          src={require('../assets/logo.jpeg')}
-          alt="logo icon"
-          width="42px"
-          height="42px"
-        />
-        <p style={{ margin: 0, color: 'white', fontSize: '32pt' }}>
-          Course Rating
+      <div>
+        <div className={styles.logo}>
+          <p style={{ color: 'white', fontSize: '32pt', marginBottom: '0', fontWeight: '600'}}>
+            UW Course Rating
+          </p>
+        </div>
+        <p style={{color: '#f0f0f0', fontSize: '12pt'}}>
+          Get UW course evaluations, grades, reviews before registration
         </p>
       </div>
       <div className={styles.barWrapper}>

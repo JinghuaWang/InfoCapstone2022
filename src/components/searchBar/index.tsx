@@ -44,7 +44,7 @@ function SearchBar(props: any) {
         dataSource={courseList}
       >
         <Search
-          placeholder="Search for course titles e.g MATH 124"
+          placeholder="Search for UW courses e.g. MATH 124 "
           size={size}
           style={{borderRadius: '10px'}}
         />

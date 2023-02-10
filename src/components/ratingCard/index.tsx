@@ -74,7 +74,7 @@ const RatingCard = (props: any) => {
 
   return (
     <div className={styles.dropMenuAndContent}> 
-      <h2 style={{margin: '0 0 6vh', position: 'relative', left: '-11vw', alignSelf:'flex-start'}}>Statistics</h2>
+      <h2 style={{margin: '0 0 6vh', position: 'relative', left: '-11vw', alignSelf:'flex-start', fontWeight: '600', fontSize:'18pt'}}>Statistics</h2>
       {/* <div className={styles.dropdown}>
       </div> */}
       <div className={styles.content}>

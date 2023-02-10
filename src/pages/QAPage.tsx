@@ -76,7 +76,7 @@ function QAPage(props: any) {
       <div className={styles.qaTitle}>
         <div className={styles.discussion}>Discussion</div>
         <Button type="primary" shape="round" size="large" onClick={handleOpen}>
-          Add a question
+          Ask a Question
         </Button>
         <Modal
           title="New Question"
