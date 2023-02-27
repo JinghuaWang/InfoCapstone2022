@@ -25,18 +25,7 @@ function headArea(props: any) {
   };
   const [state, setState] = useState(initialState);
   const [currentKey, setCurrentKey] = useState('detail');
-  useEffect(() => {
-    //判断当前的路径是否合法，若不合法，则跳回home界面
-    if (
-      ['/courseInfo/detail'].includes(history.location.pathname) &&
-      !history.location.query.code
-    ) {
-      history.push('/');
-    }
-    if (['/courseInfo/QA'].includes(history.location.pathname)) {
-      setCurrentKey('QA');
-    }
-  });
+
   useEffect(() => {
     let code: string | string[] | null = history.location.query
       ? history.location.query.code
@@ -52,6 +41,7 @@ function headArea(props: any) {
         updateProfessor(Response.data.data.professors);
       });
   }, [courseCode]);
+
   //把tags转换为标签组件
   const tags = !state.tags.length
     ? []
