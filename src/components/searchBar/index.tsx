@@ -1,15 +1,28 @@
-import React from 'react';
 import { AutoComplete, Input } from 'antd';
 import { connect } from 'dva';
-import { useState } from 'react';
 import { history } from 'umi';
 import axios from 'axios';
+import Paper from '@mui/material/Paper';
+import InputBase from '@mui/material/InputBase';
+import IconButton from '@mui/material/IconButton';
+import SearchIcon from '@mui/icons-material/Search';
+import { ReactNode, useEffect, useMemo, useState } from 'react';
+import Autocomplete, { AutocompleteRenderInputParams } from '@mui/material/Autocomplete';
+import TextField from '@mui/material/TextField';
+import { InputAdornment } from '@mui/material';
 
 const { Search } = Input;
 
-function SearchBar(props: any) {
-  const { courseList, width, update, size='large' ,courseMap, updateCourseMap, updateCourseCode, setTab} = props;
-  //const [codeMp, setcodeMp] = useState(new Map());
+function SearchBar(this: any, props: any) {
+  // user input value
+  const [inputValue, setInputValue] = useState("");
+  // list of auto complete course options
+  const [courseList, setCourseList] = useState<readonly string[]>([]);
+  // map from autocomplete course option to course code
+  const [courseMap, setCourseMap] = useState(new Map());
+  // the course code selected by user
+  const [selectedCourseCode, setCourseCode] = useState("");
+
   function searchHandler(val: string) {
     axios
       .get(
@@ -24,33 +37,62 @@ function SearchBar(props: any) {
           currentMap.set(val.course_full_name, val.course_code);
           return  val.course_full_name;
         });
-        updateCourseMap(currentMap);
-        update(results);
+        setCourseMap(currentMap);
+        setCourseList(results);
       });
   }
 
-  function redirect(val: string, obj?: Object): void {
-    updateCourseCode(courseMap.get(val))
+  useEffect(() => {
+    searchHandler(inputValue);
+  },[inputValue]);
+
+  function redirect(val: string): void {
+    setCourseCode(courseMap.get(val))
     history.push('/courseInfo/detail?code=' + courseMap.get(val));
-    setTab('detail')
   }
 
-  return (
-    <div style={{ width: '100%' }} className="barInner">
-      <AutoComplete
-        onSelect={redirect}
-        onSearch={searchHandler}
-        style={{ width: width, borderRadius: '25px' }}
-        dataSource={courseList}
-      >
-        <Search
-          placeholder="Search for UW courses e.g. MATH 124 "
-          size={size}
-          style={{borderRadius: '10px'}}
-        />
-      </AutoComplete>
-    </div>
-  );
+  const searchBar = 
+    <Paper
+      component="form"
+      sx={{display: 'flex', alignItems: 'center'}}
+      style={{width: "100%"}}
+    >
+      <Autocomplete
+        freeSolo
+        fullWidth
+        sx={{ p: '8px 1px 8px 0px'}}
+        renderInput={(params) => (
+          <TextField
+            variant="standard"
+            {...params}
+            InputProps={{
+              disableUnderline: true,
+              style: {fontSize: '1.1rem'},
+              ...params.InputProps,
+              startAdornment: (
+                <InputAdornment 
+                  style={{marginLeft: 8}}
+                  position="start">
+                  <SearchIcon />
+                </InputAdornment>
+              )
+            }}
+          />
+        )}
+        placeholder="Search for UW courses e.g. MATH 124"
+        value={selectedCourseCode}
+        onChange={(event: any,newValue: string | null) => {
+          if (newValue !== null) {
+            redirect(newValue);
+          }
+        }}
+        options={courseList}
+        onInputChange={(event, newInputValue) => {
+          setInputValue(newInputValue);
+        }}
+         />
+    </Paper>;
+  return searchBar;
 }
 
 const mapStateProps = (state: any) => {

@@ -8,7 +8,7 @@ export function getRoutes() {
   const routes = [
   {
     "path": "/",
-    "component": require('@/pages/homePage').default,
+    "component": require('@/pages/index').default,
     "exact": true
   },
   {
