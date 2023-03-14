@@ -1,7 +1,7 @@
 
 import styles from './homePage.css';
-import SearchBar from '../components/searchBar';
-import Recommandation from '@/components/recommandation'
+import SearchBar from '../components/searchBar/searchBar';
+import Recommandation from '@/components/recommandation/recommandation'
 import useAnalyticsEventTracker from '@/models/google_analystics';
 import Grid from '@mui/material/Unstable_Grid2';
 import createTheme from '@mui/material/styles/createTheme';
@@ -43,6 +43,10 @@ function homePage(props: any) {
         <div style= {{height: "3rem"}}></div>
         <Grid xs={9} md={8} lg={7} >
           <SearchBar/>
+        </Grid>
+        <div style={{height: "6rem"}}></div>
+        <Grid xs={10} md={10} lg={8} >
+          <Recommandation />
         </Grid>
     </div>;
   

@@ -14,7 +14,6 @@ import _ from 'lodash';
  */
 function Rol(props: any) {
   const { courses } = props;
-  //   console.log(courses)
 
   let redirectHandler = (e: any) => {
     let courseCode = e.currentTarget.getAttribute('key-data');

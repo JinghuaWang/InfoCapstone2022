@@ -1,6 +1,6 @@
 import styles from './homePage.css';
-import SearchBar from '../components/searchBar';
-import Recommandation from '@/components/recommandation'
+import SearchBar from '../components/searchBar/searchBar';
+import Recommandation from '@/components/recommandation/recommandation'
 import useAnalyticsEventTracker from '@/models/google_analystics';
 
 /**

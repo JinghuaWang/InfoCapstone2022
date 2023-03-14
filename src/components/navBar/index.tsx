@@ -1,5 +1,5 @@
 import React, { MouseEventHandler } from 'react';
-import SearchBar from '../searchBar'
+import SearchBar from '../searchBar/searchBar'
 import styles from './index.css'
 import {history} from 'umi'
 
